@@ -34,9 +34,12 @@ VERSION = "2.0.1.post1"
 if SYSTEM == 'darwin':
     LIBRARY_FILE = "libunicorn.2.dylib"
     STATIC_LIBRARY_FILE = "libunicorn.a"
-elif SYSTEM in ('win32', 'cygwin'):
+elif SYSTEM == 'win32':
     LIBRARY_FILE = "unicorn.dll"
     STATIC_LIBRARY_FILE = "unicorn.lib"
+elif SYSTEM == 'cygwin':
+    LIBRARY_FILE = "cygunicorn-2.dll"
+    STATIC_LIBRARY_FILE = "libunicorn.a"
 else:
     LIBRARY_FILE = "libunicorn.so.2"
     STATIC_LIBRARY_FILE = "libunicorn.a"

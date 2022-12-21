@@ -24,7 +24,7 @@ if _python2:
 
 _lib = { 'darwin': 'libunicorn.2.dylib',
          'win32': 'unicorn.dll',
-         'cygwin': 'cygunicorn.dll',
+         'cygwin': 'cygunicorn-2.dll',
          'linux': 'libunicorn.so.2',
          'linux2': 'libunicorn.so.2' }
 

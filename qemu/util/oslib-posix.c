@@ -36,6 +36,11 @@
 #define MAP_SHARED_VALIDATE   0x0
 #endif /* CONFIG_LINUX */
 
+#ifdef __CYGWIN__
+#include <windows.h>
+#define __MINGW32__
+#endif
+
 #ifndef __MINGW32__
 static void *qemu_ram_mmap(struct uc_struct *uc,
                     size_t size,
